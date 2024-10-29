@@ -9010,7 +9010,7 @@ body.locked .page-wrapper {
   font-weight: 600;
   color: var(--nisoz-black);
   border: 1px solid var(--nisoz-black);
-  padding: 30px 20px 30px 34px;
+  padding: 20px 10px 20px 24px;
   margin-bottom: -1px;
 }
 
@@ -9030,6 +9030,7 @@ body.locked .page-wrapper {
   max-width: 377px;
   border-bottom: 1px solid rgba(var(--nisoz-white-rgb), 0.2);
   padding-bottom: 32px;
+
 }
 
 @media (max-width: 991px) {
