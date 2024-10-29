@@ -46,13 +46,10 @@
       Self.ajaxChimp({
         url: mcURL,
         callback: function (resp) {
-          // appending response
           mcResp.append(function () {
             return '<p class="mc-message">' + resp.msg + "</p>";
           });
-          // making things based on response
           if (resp.result === "success") {
-            // Do stuff
             Self.removeClass("errored").addClass("successed");
             mcResp.removeClass("errored").addClass("successed");
             Self.find("input").val("");
@@ -114,25 +111,21 @@
         $(this).addClass("current");
       }
     });
-    // if any li has .current elmnt add class
     selector.children("li").each(function () {
       if ($(this).find(".current").length) {
         $(this).addClass("current");
       }
     });
-    // if no file name return
     if ("" == FileName) {
       selector.find("li").eq(0).addClass("current");
     }
   }
 
   if ($(".main-menu__list").length) {
-    // dynamic current class
     let mainNavUL = $(".main-menu__list");
     dynamicCurrentMenuClass(mainNavUL);
   }
   if ($(".services-details__services").length) {
-    // dynamic current class
     let mainNavUL = $(".services-details__services");
     dynamicCurrentMenuClass(mainNavUL);
   }
@@ -178,7 +171,6 @@
     });
   }
 
-  //Show Popup menu
   $(document).on("click", ".megamenu-clickable--toggler > a", function (e) {
     $("body").toggleClass("megamenu-popup-active");
     $(this).parent().find("ul").toggleClass("megamenu-clickable--active");
@@ -218,10 +210,10 @@
 
   if ($(".wow").length) {
     var wow = new WOW({
-      boxClass: "wow", // animated element css class (default is wow)
-      animateClass: "animated", // animation css class (default is animated)
-      mobile: true, // trigger animations on mobile devices (default is true)
-      live: true, // act on asynchronously loaded content (default is true)
+      boxClass: "wow",
+      animateClass: "animated",
+      mobile: true,
+      live: true,
     });
     wow.init();
   }
@@ -239,7 +231,6 @@
       });
   }
 
-  //Accordian
   if ($(".nisoz-accrodion").length) {
     var accrodionGrp = $(".nisoz-accrodion");
     accrodionGrp.each(function () {
@@ -269,7 +260,6 @@
     });
   }
 
-  //Pricing Tabs
   if ($(".tabs-box").length) {
     $(".tabs-box .tab-buttons .tab-btn").on("click", function (e) {
       e.preventDefault();
@@ -300,7 +290,6 @@
     });
   }
 
-  /*-- Quantity --*/
   $(".add").on("click", function () {
     if ($(this).prev().val() < 999) {
       $(this)
@@ -317,7 +306,6 @@
     }
   });
 
-  /*-- Price Range --*/
   function priceFilter() {
     if ($(".price-ranger").length) {
       $(".price-ranger #slider-range").slider({
@@ -339,7 +327,6 @@
     }
   }
 
-  /*-- Checkout Accoradin --*/
   if ($(".checkout-page__payment__title").length) {
     $(".checkout-page__payment__item")
       .find(".checkout-page__payment__content")
@@ -362,14 +349,12 @@
     });
   }
 
-  /*-- Dynamic year --*/
   let dynamicyearElm = $(".dynamic-year");
   if (dynamicyearElm.length) {
     let currentYear = new Date().getFullYear();
     dynamicyearElm.html(currentYear);
   }
 
-  /*-- Hover Tilt --*/
   let nisozTiltElm = $(".nisoz-tilt");
   if (nisozTiltElm.length) {
     nisozTiltElm.each(function () {
@@ -381,7 +366,6 @@
     });
   }
 
-  // === Filter Masnry===
   function filterMasonaryLayout() {
     let nisozMasonary = $(".nisoz-masonary");
     if (nisozMasonary.length) {
