@@ -3341,6 +3341,9 @@ h6 {
   opacity: 0;
   transition: all 500ms ease;
   transform: scale(0);
+  /* set display play button in dropdown header  */
+  display: none;
+  
 }
 
 .main-menu .main-menu__list li ul li.current > a,
